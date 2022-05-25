@@ -19,8 +19,16 @@ function getTime() {
   if (hour === 24) {
     hour = 00;
   }
-  hoursContainer.innerText = hour;
-  minutesContainer.innerText = minute;
+  if (hour < 10) {
+    hoursContainer.innerText = "0" + hour;
+  } else {
+    hoursContainer.innerText = hour;
+  }
+  if (minute < 10) {
+    minutesContainer.innerText = "0" + minute;
+  } else {
+    minutesContainer.innerText = minute;
+  }
   if (second < 10) {
     secondsContainer.innerText = "0" + second;
   } else {
